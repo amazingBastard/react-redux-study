@@ -9,7 +9,7 @@ const API_KEY = 'AIzaSyDGxBKjefeiJrJ4hJhPH821UBJIO-ufMSw';
 // create a new component. this component should produce some HTML
 const App = () => {
   return (
-    <div>
+    <div className="jumbotron">
       <SearchBar />
     </div>
   );
