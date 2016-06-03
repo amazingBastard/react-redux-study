@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
+import VideoList from './components/video_list';
 
 // const (use define things that dont change)
 // usually start with caps and employ underscores
@@ -21,8 +22,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
+      <div className="row">
         <SearchBar />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
