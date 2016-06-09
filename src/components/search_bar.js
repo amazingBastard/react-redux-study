@@ -15,13 +15,18 @@ class SearchBar extends Component {
   render() {
     // on input change, set the state to the current value of the input as event occurs
     return (
-      <div className="form-group">
+      <div className="form-group search-bar">
         <input
           className="form-control"
           value={this.state.term}
-          onChange={event => this.setState({ term: event.target.value })} />
+          onChange={event => this.onInputChange(event.target.value)} />
       </div>
     );
+  }
+
+  onInputChange(term) {
+    this.setState({term});
+    this.props.onSearchTermChange(term);
   }
 
 }
